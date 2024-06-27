@@ -1,1 +1,9 @@
-<p>github-issue-list works!</p>
+<div *ngIf="issues">
+  <h2>Issues for {{ owner }}/{{ repoName }}</h2>
+  <ul>
+    <li *ngFor="let issue of issues">
+      <h3>{{ issue.title }}</h3>
+      <p>{{ issue.body }}</p>
+    </li>
+  </ul>
+</div>

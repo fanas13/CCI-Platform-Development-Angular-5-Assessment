@@ -19,4 +19,9 @@ export class GithubService {
     const url = `${this.apiUrl}/repos/${owner}/${repoName}`;
     return this.http.get(url);
   }
+
+  getIssues(owner: string, repoName: string): Observable<any[]> {
+    const url = `${this.apiUrl}/repos/${owner}/${repoName}/issues`;
+    return this.http.get<any[]>(url);
+  }
 }

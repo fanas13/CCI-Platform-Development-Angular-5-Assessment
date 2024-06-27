@@ -33,6 +33,7 @@ export class GithubRepositoryDetailsComponent implements OnInit {
 
   loadRepositoryDetails(): void {
     this.githubService.getRepositoryDetails(this.owner, this.repoName).subscribe((data: any) => {
+      debugger
       this.repository = data;
     });
   }
