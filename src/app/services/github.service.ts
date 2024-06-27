@@ -14,5 +14,4 @@ export class GithubService {
     const url = `${this.apiUrl}/search/repositories?q=${query}`;
     return this.http.get(url);
   }
-
 }
