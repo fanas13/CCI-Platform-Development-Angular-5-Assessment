@@ -2,15 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GithubService } from '../../services/github.service';
-import { PieChartComponent } from '../../shared-components/charts/pie-chart.component';
 
 
 @Component({
   selector: 'app-repository-details',
   standalone: true,
   imports: [
-    CommonModule,
-    PieChartComponent
+    CommonModule
   ],
   templateUrl: './github-repository-details.component.html',
   styleUrls: ['./github-repository-details.component.scss']
