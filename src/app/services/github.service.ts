@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 export class GithubService {
 
   private apiUrl = 'https://api.github.com';
-
   constructor(private http: HttpClient) { }
 
   searchRepositories(query: string): Observable<any> {
