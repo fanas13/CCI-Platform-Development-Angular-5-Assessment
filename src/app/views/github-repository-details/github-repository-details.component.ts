@@ -1,12 +1,40 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GithubService } from '../../services/github.service';
 
 @Component({
-  selector: 'app-github-repository-details',
+  selector: 'app-repository-details',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+  ],
   templateUrl: './github-repository-details.component.html',
-  styleUrl: './github-repository-details.component.css'
+  styleUrls: ['./github-repository-details.component.scss']
 })
-export class GithubRepositoryDetailsComponent {
+export class GithubRepositoryDetailsComponent implements OnInit {
+
+  owner!: string;
+  repoName!: string;
+  repository: any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private githubService: GithubService
+  ) { }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.owner = params['owner'];
+      this.repoName = params['repoName'];
+      this.loadRepositoryDetails();
+    });
+  }
+
+  loadRepositoryDetails(): void {
+    this.githubService.getRepositoryDetails(this.owner, this.repoName).subscribe((data: any) => {
+      this.repository = data;
+    });
+  }
 
 }
