@@ -6,4 +6,6 @@
   <p>Open Issues: {{ repository.open_issues_count }}</p>
   <p><a mat-button color="primary" href="{{ repository.html_url }}" target="_blank">View on GitHub</a></p>
   <p><a mat-button color="primary" href="repository/{{ repository.full_name }}/issues">View All Issues</a></p>
+
+  <app-pie-chart [labels]="pieChartLabels" [datasets]="pieChartData"></app-pie-chart>
 </div>
