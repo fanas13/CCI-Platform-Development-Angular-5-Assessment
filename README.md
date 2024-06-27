@@ -1,27 +1,61 @@
-# PlatformDevelopmentAngular5Assessment
+# Angular GitHub Repository Viewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+This project is an Angular application that allows users to search for GitHub repositories, view repository details, and display issue lists and pie charts based on repository data.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Search for GitHub repositories by name.
+- View detailed information about each repository.
+- Display issues related to a selected repository.
+- Visualize repository data using pie charts.
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before you begin, ensure you have the following installed:
 
-## Build
+- Node.js and npm (Node Package Manager) Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clone the repository:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/fanas13/CCI-Platform-Development-Angular-5-Assessment.git
+```
+2. Install dependencies:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Serve the application:
 
-## Further help
+```bash
+ng serve
+```
+4. Open your browser and navigate to http://localhost:4200/ to view the application.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Usage
+
+- Search Repositories: Enter a repository name in the search bar to find repositories matching the query.
+ - View Repository Details: Click on a repository card to view detailed information about the repository.
+- Navigate Issues: Navigate to the Issues tab to see a list of issues associated with the selected repository.
+ - Visualize Data: Explore the pie charts on the dashboard to visualize various repository statistics. (incomplete :()
+
+## Components
+
+ - GithubRepositoryListComponent: Displays a list of GitHub repositories based on search queries.
+ - GithubRepositoryDetailsComponent: Shows detailed information about a selected GitHub repository.
+ - GithubIssueListComponent: Lists issues related to a GitHub repository.
+
+## Dependencies
+
+ - Angular: ^18.0.0
+ - Angular Material: ^18.0.5
+ - NgApexcharts: 
+ - RxJS: ~7.8.0
+ - Other dependencies can be found in package.json
+
+## Contributing
+Contributions are welcome! Fork the repository and submit a pull request with your suggested improvements.
+
